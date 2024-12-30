@@ -8,67 +8,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 text-center d-flex ftco-animate">
-                <a class="services-1" href="#">
+            @foreach($services as $service)
+                <div class="col-md-4 text-center d-flex ftco-animate">
+                    <a class="services-1" href="#">
 							<span class="icon">
-								<i class="flaticon-analysis"></i>
+								@svg($service->icon,  ['style' => 'width: 50%; color: #ffffff'])
 							</span>
-                    <div class="desc">
-                        <h3 class="mb-5">Web Design</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 text-center d-flex ftco-animate">
-                <a class="services-1" href="#">
-							<span class="icon">
-								<i class="flaticon-flasks"></i>
-							</span>
-                    <div class="desc">
-                        <h3 class="mb-5">Phtography</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 text-center d-flex ftco-animate">
-                <a class="services-1" href="#">
-							<span class="icon">
-								<i class="flaticon-ideas"></i>
-							</span>
-                    <div class="desc">
-                        <h3 class="mb-5">Web Developer</h3>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4 text-center d-flex ftco-animate">
-                <a class="services-1" href="#">
-							<span class="icon">
-								<i class="flaticon-analysis"></i>
-							</span>
-                    <div class="desc">
-                        <h3 class="mb-5">App Developing</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 text-center d-flex ftco-animate">
-                <a class="services-1" href="#">
-							<span class="icon">
-								<i class="flaticon-flasks"></i>
-							</span>
-                    <div class="desc">
-                        <h3 class="mb-5">Branding</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 text-center d-flex ftco-animate">
-                <a class="services-1" href="#">
-							<span class="icon">
-								<i class="flaticon-ideas"></i>
-							</span>
-                    <div class="desc">
-                        <h3 class="mb-5">Product Strategy</h3>
-                    </div>
-                </a>
-            </div>
+                        <div class="desc">
+                            <h3 class="mb-5">{{ $service->title }}</h3>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
         </div>
     </div>
 </section>

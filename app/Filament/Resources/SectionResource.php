@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\SectionResource\Pages;
 use App\Filament\Resources\SectionResource\RelationManagers;
 use App\Models\Section;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -22,7 +23,8 @@ class SectionResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Textarea::make('description')
+                    ->columnSpan(2)
             ]);
     }
 
@@ -35,8 +37,6 @@ class SectionResource extends Resource
                 TextColumn::make('sort')
                     ->badge(),
                 TextColumn::make('name'),
-                TextColumn::make('description'),
-
                 ToggleColumn::make('status'),
             ])
             ->filters([

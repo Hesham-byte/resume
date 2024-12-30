@@ -14,8 +14,7 @@
                     <div class="col-md-12 heading-section ftco-animate">
                         <h1 class="big">About</h1>
                         <h2 class="mb-4">About Me</h2>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary
-                            regelialia.</p>
+                        <p>{{ $section->description }}</p>
                         <ul class="about-info mt-4 px-md-0 px-2">
                             <li class="d-flex"><span>Name:</span> <span>Clark Thompson</span></li>
                             <li class="d-flex"><span>Date of birth:</span> <span>January 01, 1987</span></li>
